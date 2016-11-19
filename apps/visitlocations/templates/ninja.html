@@ -1,0 +1,45 @@
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'gold/styles.css' %}">
+  </head>
+  <body>
+        <div class="container">
+            <div id="gold">Your gold: {{total}}</div>
+            <h1>Ninja Gold</h1>
+            <div id="farm">
+                <h2>Farm</h2>
+                <p>(earn 2-15 gold)</p>
+                <a href='/farm'><button>Farm</button></a>
+            </div>
+            <div id="cave">
+                <h2>Meditation Cave</h2>
+                <p>(win 0 gold)</p>
+               <a href='/cave'><button>Cave</button></a>
+            </div>
+            <div id="dojo">
+                <h2>Dojo</h2>
+                <p>(win 1-5 gold)</p>
+                <a href='/dojo'><button>Dojo</button></a>
+            </div>
+            <div id="dice">
+                 <h2>Play Dice with Shogun</h2>
+                <p>(win or lose 1-1000 gold)</p>
+                <a href='/dice'><button>Dice</button></a>
+            </div>
+             <div id="messages">
+                   {% if messages %}
+                        {%for msg in messages%}
+                            <p>{{msg.timestamp}}</p>
+                            <p>{{msg.message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            <form action="{% url 'restart' %}" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Restart">
+            </form>
+
+        </div>
+  </body>
+</html>

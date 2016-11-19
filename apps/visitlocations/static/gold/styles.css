@@ -1,0 +1,68 @@
+.container{
+    width: 900px;
+    margin: 0 auto;    
+    border: 1px solid silver;
+    background: #EAEAEA;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+form label{
+    display: inline-block;
+    width: 100px;
+}
+form input{
+    margin: 10px;
+}
+
+.container div{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    background-size: cover;
+    color: #4D4D4D;
+    font-family: sans-serif;
+    vertical-align: top;
+}
+
+.container h1{
+    margin-top: 0;
+}
+
+#farm{
+    background-image: url("/static/img/farm.png");
+}
+
+#cave{
+    background-image: url("/static/img/cave.png");
+}
+
+#dojo{
+    background-image: url("/static/img/dojo.png");
+}
+
+#dice{
+    background-image: url("/static/img/dice.png");
+}
+
+#messages{
+    background-color: white;
+    border: 1px solid silver;
+    padding: 10px;
+    width: 800px;
+    min-height: 70px;
+    text-align: left;
+    font-size: 0.8em;
+    overflow: scroll;
+}
+
+.container #gold{
+    height: 50px;
+}
+/*
+form input[type=submit]{
+    margin-left: 150px;
+
+}*/
